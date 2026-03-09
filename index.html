@@ -149,6 +149,28 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   .hero-title{font-size:2.6rem}
   .hero-ctas{flex-direction:column;align-items:flex-start}
 }
+
+  /* MODAL */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(15,10,5,0.6);z-index:200;align-items:center;justify-content:center}
+  .modal-overlay.active{display:flex}
+  .modal{background:var(--cream);border:1px solid var(--cream3);padding:52px 48px;max-width:480px;width:90%;position:relative;animation:fadeUp 0.4s ease}
+  .modal-close{position:absolute;top:18px;right:20px;background:none;border:none;font-size:1.2rem;color:var(--beige);cursor:pointer;line-height:1;transition:color 0.2s;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+  .modal-close:hover{color:var(--brown)}
+  .modal-label{font-size:.7rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .modal-label::before{content:'';width:22px;height:1px;background:var(--gold);flex-shrink:0}
+  .modal-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:400;color:var(--brown);line-height:1.15;margin-bottom:16px}
+  .modal-body{font-size:.97rem;line-height:1.8;color:var(--brownlt)}
+
+  /* MODAL */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(15,10,5,0.6);z-index:200;align-items:center;justify-content:center}
+  .modal-overlay.active{display:flex}
+  .modal{background:var(--cream);border:1px solid var(--cream3);padding:52px 48px;max-width:480px;width:90%;position:relative;animation:fadeUp 0.4s ease}
+  .modal-close{position:absolute;top:18px;right:20px;background:none;border:none;font-size:1.4rem;color:var(--beige);cursor:pointer;line-height:1;transition:color 0.2s;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+  .modal-close:hover{color:var(--brown)}
+  .modal-label{font-size:.7rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .modal-label::before{content:'';width:22px;height:1px;background:var(--gold);flex-shrink:0}
+  .modal-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:400;color:var(--brown);line-height:1.15;margin-bottom:16px}
+  .modal-body{font-size:.97rem;line-height:1.8;color:var(--brownlt)}
 </style>
 </head>
 <body>
@@ -345,6 +367,7 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
     </div>
     <div>
       <form class="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact"/>
         <div class="form-row">
           <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane"/></div>
           <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Smith"/></div>
@@ -382,9 +405,34 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   <div class="foot-copy">© 2026 Aurum Import Group, Detroit MI. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+<div class="modal-overlay" id="successModal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">&#215;</button>
+    <div class="modal-label">Message Received</div>
+    <div class="modal-title">Thank you for reaching out.</div>
+    <p class="modal-body">A member of the Aurum Import Group team will be in touch with you shortly. We look forward to learning more about your needs.</p>
+  </div>
+</div>
+
+<script>
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); });
-  document.getElementById('submitBtn').addEventListener('click', function(){
-    this.textContent = 'Message Sent';
-    th
+
+  var form = document.querySelector('form[name="contact"]');
+  var modal = document.getElementById('successModal');
+  var modalClose = document.getElementById('modalClose');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(form);
+    fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
+      .then(function(){ modal.classList.add('active'); form.reset(); })
+      .catch(function(){ modal.classList.add('active'); });
+  });
+
+  modalClose.addEventListener('click', function(){ modal.classList.remove('active'); });
+  modal.addEventListener('click', function(e){ if(e.target === modal){ modal.classList.remove('active'); } });
+</script>
+</body>
+</html>

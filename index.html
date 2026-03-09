@@ -426,7 +426,11 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var data = new FormData(form);
-    fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
+    fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(Array.from(data.entries())).toString()
+    })
       .then(function(){ modal.classList.add('active'); form.reset(); })
       .catch(function(){ modal.classList.add('active'); });
   });

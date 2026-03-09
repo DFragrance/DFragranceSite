@@ -366,7 +366,7 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
       <div class="cd"><div class="cd-label">Hours</div><div class="cd-value">Mon – Fri, 7 am – 9 pm EST</div></div>
     </div>
     <div>
-      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/thank-you.html">
           <input type="hidden" name="form-name" value="contact"/>
         <div class="form-row">
           <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane" name="first-name"/></div>
@@ -419,24 +419,7 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); });
 
-  var form = document.querySelector('form[name="contact"]');
-  var modal = document.getElementById('successModal');
-  var modalClose = document.getElementById('modalClose');
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var data = new FormData(form);
-    fetch('/', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: new URLSearchParams(Array.from(data.entries())).toString()
-    })
-      .then(function(){ modal.classList.add('active'); form.reset(); })
-      .catch(function(){ modal.classList.add('active'); });
-  });
-
-  modalClose.addEventListener('click', function(){ modal.classList.remove('active'); });
-  modal.addEventListener('click', function(e){ if(e.target === modal){ modal.classList.remove('active'); } });
 </script>
 </body>
 </html>

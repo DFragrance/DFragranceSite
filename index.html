@@ -94,15 +94,15 @@ section{padding:104px 60px}
 #articles{background:var(--white)}
 .articles-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:24px}
 .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--cream3)}
-.art{background:var(--white);padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;min-height:460px;transition:background .25s;text-decoration:none}
+.art{background:var(--white);text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer;padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;min-height:460px;transition:background .25s;text-decoration:none}
 .art:hover{background:var(--cream)}
-.art.featured{background:var(--cream);border-top:2px solid var(--gold)}
+.art.featured{text-decoration:none;color:inherit;background:var(--cream);border-top:2px solid var(--gold)}
 .art-cat{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
 .art-title{font-family:Georgia,serif;font-size:1.45rem;color:var(--brown);line-height:1.25;margin-bottom:16px}
 .art.featured .art-title{font-size:1.45rem}
 .art-excerpt{font-size:.97rem;line-height:1.85;color:var(--brownlt);flex-grow:1;margin-bottom:28px}.art-excerpt p{margin-bottom:14px}.art-excerpt p:last-child{margin-bottom:0}
 .art-meta{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;letter-spacing:.12em;color:var(--brown);text-transform:uppercase;border-top:1px solid var(--cream3);padding-top:18px}
-.art-arrow{color:var(--gold)}
+.art-arrow{color:var(--gold)}.art-read{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:opacity .2s}.art-read:hover{opacity:.7}
 
 /* CONTACT */
 #contact{background:var(--cream)}
@@ -202,7 +202,7 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   <div class="hero-content">
     <p class="hero-eyebrow">Detroit &nbsp;·&nbsp; Est. 2024 &nbsp;·&nbsp; Licensed Customs Broker Partners</p>
     <h1 class="hero-title">Great Fragrance<br>Deserves to Be Found</h1>
-    <p class="hero-sub">Aurum Import Group specializes in the global sourcing and compliant importation of fine perfume. We navigate dangerous goods regulations, customs brokerage, and international logistics.</p>
+    <p class="hero-sub">Aurum Import Group specializes in the global sourcing and compliant importation of fine perfumery navigating dangerous goods regulations, customs brokerage, and international logistics with unmatched expertise.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">Request a Consultation</a>
       <a href="#services" class="btn-outline">Our Services</a>
@@ -217,11 +217,11 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
 <section id="about">
   <div class="about-text">
     <p class="sec-label">About Us</p>
-    <h2 class="sec-title">Built on <em>Precision</em> and Prestige</h2>
+    <h2 class="sec-title">A Detroit Firm Built on <em>Precision</em> and Prestige</h2>
     <div class="divider"></div>
-    <p>Aurum Import Group recognizes that fragrance importers needed a partner who understood both the <strong>luxury nuance of perfumery</strong> and the technical rigor of dangerous goods regulation.</p>
+    <p>Aurum Import Group was founded in Detroit by logistics and compliance professionals with deep roots in international trade. We recognized a gap: fragrance importers needed a partner who understood both the <strong>luxury nuance of perfumery</strong> and the technical rigor of dangerous goods regulation.</p>
     <p>Perfumes and cosmetic fragrances contain alcohol and volatile compounds classified as flammable liquids under IATA, IMDG, and DOT regulations. Our team manages every aspect of this designation from <strong>UN3065 and UN1266 classification</strong> to proper labeling, packing groups, and shipper's declarations.</p>
-    <p>Working alongside licensed customs brokers, we ensure your shipments clear U.S. Customs and Border Protection with no surprises.</p>
+    <p>Working alongside licensed customs brokers, we ensure your shipments clear U.S. Customs and Border Protection seamlessly, whether arriving via Detroit Metropolitan Wayne County Airport, Port of Detroit, or other points of entry.</p>
   </div>
 </section>
 
@@ -240,25 +240,25 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
     <div class="svc">
       <span class="svc-num">02</span>
       <div class="svc-name">Dangerous Goods Management</div>
-      <p class="svc-desc">Alcohol-based fragrances require precise dangerous goods classification under IATA, IMDG, and 49 CFR. We prepare and review SDS documentation, packing group designations, and shipper's declarations so your cargo moves legally and safely.</p>
+      <p class="svc-desc">Alcohol-based fragrances require precise dangerous goods classification under IATA, IMDG, and 49 CFR. We prepare SDS documentation, packing group designations, and shipper's declarations so your cargo moves legally and safely.</p>
       <div class="tags"><span class="tag">IATA DG</span><span class="tag">UN1266 / UN3065</span><span class="tag">49 CFR</span><span class="tag">IMDG</span></div>
     </div>
     <div class="svc">
       <span class="svc-num">03</span>
       <div class="svc-name">Customs Brokerage Coordination</div>
-      <p class="svc-desc">We work directly with licensed U.S. Customs Brokers to prepare entry documentation, HTS classification, and FDA notices when required. Our broker relationships ensure priority handling and rapid clearance.</p>
+      <p class="svc-desc">We work directly with licensed U.S. Customs Brokers to prepare entry documentation, HTS classification, and FDA notices when required. Our broker relationships in Detroit ensure priority handling and rapid clearance.</p>
       <div class="tags"><span class="tag">CBP Entry</span><span class="tag">HTS Classification</span><span class="tag">FDA Liaison</span></div>
     </div>
     <div class="svc">
       <span class="svc-num">04</span>
       <div class="svc-name">Warehousing &amp; Distribution</div>
-      <p class="svc-desc">Post-clearance, your fragrance inventory is received into our Detroit-area facility, with temperature-controlled storage options and last-mile distribution across the U.S. available on request.</p>
+      <p class="svc-desc">Post-clearance, your fragrance inventory is received into our Detroit-area partner facilities, with temperature-controlled storage options and last-mile distribution across the U.S. available on request.</p>
       <div class="tags"><span class="tag">Detroit Area</span><span class="tag">Climate Controlled</span><span class="tag">Last-Mile</span></div>
     </div>
     <div class="svc">
       <span class="svc-num">05</span>
       <div class="svc-name">Alternative Distribution Channels</div>
-      <p class="svc-desc">As traditional retail falters, we connect fragrance brands with distribution channels that preserve the integrity of the product and the prestige of the brand. From curated pop-up experiences to placement in niche fashion boutiques and concept stores, we identify the environments where your fragrance will be encountered and understood by exactly the right consumer.</p>
+      <p class="svc-desc">As traditional retail falters, we connect fragrance brands with distribution channels that preserve the integrity of the product and the prestige of the brand. From curated pop-up experiences to placement in niche fashion boutiques and concept stores, we identify the environments where your fragrance will be encountered and understood by exactly the right consumer. Shelf space is no longer the only path to the customer.</p>
       <div class="tags"><span class="tag">Pop-Ups</span><span class="tag">Fashion Boutiques</span><span class="tag">Concept Stores</span><span class="tag">Brand Integrity</span></div>
     </div>
     <div class="svc">
@@ -274,15 +274,14 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   <div class="comp-grid">
     <div>
       <p class="sec-label">Compliance &amp; Certifications</p>
-      <h2 class="sec-title">Ensuring Compliant Imports</em></h2>
+      <h2 class="sec-title">Regulated with <em>Rigor</em></h2>
       <div class="divider"></div>
       <p style="font-size:1.02rem;line-height:1.85;color:var(--brownlt)">Dangerous goods compliance is not optional in fragrance logistics. Aurum Import Group ensures every shipment meets applicable regulatory frameworks from air freight to ocean, domestic ground to international multimodal.</p>
       <div class="comp-list">
-        <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">IATA Dangerous Goods Regulations</div><div class="comp-desc">Proper classification of perfumery articles and flammable liquids for air transport.</div></div></div>
-        <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">DOT Hazardous Materials compliance</div><div class="comp-desc">Domestic ground transport compliance, including proper labeling under U.S. DOT rules.</div></div></div>
-        <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">CBP Entry</div><div class="comp-desc">U.S. Customs entry filings and bond management when applicable.</div></div></div>
+        <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">IATA Dangerous Goods Regulations</div><div class="comp-desc">Proper classification of perfumery articles and flammable liquids for air transport, including packing instructions PI 307 and PI 370.</div></div></div>
+        <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">49 CFR DOT Hazardous Materials</div><div class="comp-desc">Domestic ground transport compliance, including proper labeling, placarding, and emergency response information under U.S. DOT rules.</div></div></div>
+        <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">CBP Entry &amp; FDA Registration</div><div class="comp-desc">U.S. Customs entry filings, bond management, and FDA Prior Notice or facility registration where applicable to cosmetic imports.</div></div></div>
         <div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">IMDG Code Ocean Freight</div><div class="comp-desc">Compliance with the International Maritime Dangerous Goods code for sea shipments, including stowage categories and segregation requirements.</div></div></div>
-		<div class="comp-item"><div class="comp-dot"></div><div><div class="comp-name">FDA cosmetic compliance</div><div class="comp-desc">Ensuring compliance with FDA Facility Registration (MoCRA).</div></div></div>
       </div>
     </div>
     <div style="padding-top:92px">
@@ -308,49 +307,46 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
   </div>
   <div class="articles-grid">
 
-    <a class="art featured" href="#">
+    <a href="article-perfumetok.html" class="art featured">
       <div>
         <span class="art-cat">Digital Trends · Featured</span>
         <div class="art-title">How FragranceTok Became the Most Powerful Sales Channel in Perfume</div>
         <div class="art-excerpt">
-<p>Over the past decade, an unlikely corner of social media has transformed the global fragrance industry. "PerfumeTok", the fragrance community on TikTok, has grown from a niche hobby into one of the most influential forces in beauty marketing.</p>
-<p>Beginning in 2019, fragrance enthusiasts started posting short videos reviewing perfumes and ranking their favorite scents. Early creators had relatively small audiences, but within just a few years, leading fragrance influencers grew from a few hundred thousand followers to millions of followers, establishing a new category of online creator.</p>
-<p>As these creators gained audiences, the broader PerfumeTok community expanded rapidly. The hashtag #PerfumeTok, which had fewer than one hundred million views in 2019, grew into a multibillion-view ecosystem by the mid-2020s. This surge reflected a shift in how consumers discover fragrance. Unlike traditional perfume marketing built around department stores and magazine ads, PerfumeTok relied on storytelling, aesthetics, and personality-driven recommendations.</p>
-<p>The impact on the fragrance industry has been substantial. During the same period that PerfumeTok exploded, the global fragrance market experienced strong growth. Global fragrance sales increased from roughly $48 billion in 2019 to an estimated $78 billion by 2026. While multiple factors contributed to this growth, social media has played an increasingly central role in shaping consumer demand.</p>
-<p>PerfumeTok succeeded by solving the unique challenge of selling a sensory product online. Because viewers cannot smell a fragrance through a screen, creators developed descriptive narratives such as describing scents as "rich hotel lobby," "vanilla dessert," or "clean girl aesthetic." These stories made fragrance both entertaining, intriguing, and shareable.</p>
-<p>Today, PerfumeTok represents more than a trend. It has reshaped how fragrances are marketed, discovered, and purchased, demonstrating the power of social media to transform even the most traditional consumer industries.</p>
-</div>
-        <p style="font-family:Georgia,serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-top:24px;padding-top:20px;border-top:1px solid var(--cream3);">How will you reach these consumers?</p>
+          <p>Sol de Janeiro was a niche body care brand with &euro;26 million in sales in 2022. By 2024, after going viral on TikTok, it had become Sephora's top-selling brand of the year with $780 million in global sales &mdash; a 30x increase in two years.</p>
+        </div>
       </div>
-      <div class="art-meta"><span>March 2026</span><span class="art-arrow">&#8594;</span></div>
+      <div class="art-meta">
+        <span>March 2026</span>
+        <span class="art-read">Read Article &#8594;</span>
+      </div>
     </a>
 
-    <a class="art" href="#">
+    <a href="article-saks.html" class="art">
       <div>
         <span class="art-cat">Luxury Retail</span>
         <div class="art-title">Saks' Collapse Is Closing the One Place Americans Actually Test Perfume</div>
         <div class="art-excerpt">
-<p>Fragrance is unlike almost any other consumer product you cannot buy it on instinct alone. The decision to spend $200 or $400 on a scent depends entirely on the ability to smell it first, on skin, in a calm and unhurried environment. Saks Fifth Avenue, Neiman Marcus, and Bergdorf Goodman have historically been those environments.</p>
-<p>Trained fragrance advisors, extensive brand counters, and a clientele willing to spend made these stores the single most important physical access channel for prestige fragrance in the United States. The Saks Global bankruptcy is dismantling that channel. When vendors went unpaid through 2025 fragrance houses began pulling or withholding inventory.</p>
-<p>The result is empty counters in the very stores where American consumers go to discover and repurchase their favorites. A consumer who discovers a fragrance on social media and walks into a Saks to try it may find the tester gone, the counter understaffed, or the product simply out of stock. That moment of conversion is being lost and the longer this persists, the harder it becomes to recapture.</p>
-</div>
-        <p style="font-family:Georgia,serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-top:24px;padding-top:20px;border-top:1px solid var(--cream3);">Where will your customers find you now?</p>
+          <p>Fragrance is unlike almost any other consumer product you cannot buy it on instinct alone. The decision to spend $200 or $400 on a scent depends entirely on the ability to smell it first, on skin, in a calm and unhurried environment. Saks Fifth Avenue, Neiman Marcus, and Bergdorf Goodman have historically been those environments.</p>
+        </div>
       </div>
-      <div class="art-meta"><span>February 2026</span><span class="art-arrow">&#8594;</span></div>
+      <div class="art-meta">
+        <span>February 2026</span>
+        <span class="art-read">Read Article &#8594;</span>
+      </div>
     </a>
 
-    <a class="art" href="#">
+    <a href="article-niche.html" class="art">
       <div>
         <span class="art-cat">Market Analysis</span>
         <div class="art-title">The Consumer Has Moved On: Why Niche Fragrance Is Outpacing Legacy Luxury</div>
         <div class="art-excerpt">
-<p>Something has shifted in the way people choose what to wear on their skin. The era of the signature designer scent the Chanel No. 5, the Armani Acqua di Gio, the Dior Sauvage is not over, but it is no longer the whole story. A growing and increasingly influential segment of fragrance buyers has decided that smelling like everyone else is exactly what they are trying to avoid.</p>
-<p>The numbers reflect it clearly. The niche perfume market is growing at a CAGR of over 14%, compared to just 2.7% for mass-market fragrances and surveys show that 63% of luxury fragrance buyers now actively seek personalized or unique scents over recognized designer names. Niche brands have gained 10 percentage points of category market share in recent years, while traditional brands have declined. In the U.S. alone, niche fragrance unit sales rose 11.7% in a single year.</p>
-<p>This is not a passing trend. It reflects a deeper shift in how consumers understand identity and self-expression. Fragrance has become personal in a way it was not a generation ago something discovered rather than assigned, worn as a signal of individuality rather than status. For brands and importers operating in this space, the opportunity is significant. But so is the challenge: these are smaller houses, with shorter production runs, rarer ingredients, and supply chains that require a more hands-on, compliance-fluent import partner to navigate successfully.</p>
-</div>
-        <p style="font-family:Georgia,serif;font-size:1.1rem;font-style:italic;color:var(--gold);margin-top:24px;padding-top:20px;border-top:1px solid var(--cream3);">How will you fulfill US Niche fragrance demand?</p>
+          <p>Something has shifted in the way people choose what to wear on their skin. The era of the signature designer scent the Chanel No. 5, the Armani Acqua di Gio, the Dior Sauvage is not over, but it is no longer the whole story. A growing and increasingly influential segment of fragrance buyers has decided that smelling like everyone else is exactly what they are trying to avoid.</p>
+        </div>
       </div>
-      <div class="art-meta"><span>January 2026</span><span class="art-arrow">&#8594;</span></div>
+      <div class="art-meta">
+        <span>January 2026</span>
+        <span class="art-read">Read Article &#8594;</span>
+      </div>
     </a>
 
   </div>
@@ -363,6 +359,7 @@ footer{background:var(--brown);padding:48px 60px;display:flex;justify-content:sp
       <h2 class="sec-title">Begin Your <em>Import Journey</em></h2>
       <div class="divider"></div>
       <div class="cd"><div class="cd-label">Location</div><div class="cd-value">Detroit, Michigan, USA</div></div>
+      <div class="cd"><div class="cd-label">Email</div><div class="cd-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e0e7efe6c9e8fcfbfce4e0e4f9e6fbfdeefbe6fcf9a7eae6e4">[email&#160;protected]</a></div></div>
       <div class="cd"><div class="cd-label">Hours</div><div class="cd-value">Mon – Fri, 7 am – 9 pm EST</div></div>
     </div>
     <div>
